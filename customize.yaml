@@ -1,0 +1,4 @@
+sensor.yr_symbol:
+  friendly_name: Weer
+sun.sun:
+  friendly_name: Zon

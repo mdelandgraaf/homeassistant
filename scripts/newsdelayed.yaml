@@ -1,0 +1,12 @@
+newsdelayed:
+  alias: Schakel nieuws
+  sequence:
+  - service: media_player.turn_on
+    data:
+      entity_id: media_player.woonkamer_ziggo
+  - delay:
+    seconds: 5
+  - service: media_player.source
+    data:
+      entity_id: media_player.woonkamer_ziggo
+      source: "RTL 4"

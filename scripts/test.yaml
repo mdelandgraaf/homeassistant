@@ -1,0 +1,6 @@
+testscript:
+  alias: Schakel nieuws
+  sequence:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.woonkamer_lamp_raam

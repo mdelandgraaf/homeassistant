@@ -1,0 +1,15 @@
+  - platform: yr
+  - platform: buienradar
+    name: 'wijdenes'
+    monitored_conditions:
+      # current condition:
+      - condition
+      - rainchance_1d
+  - platform: fitbit
+    clock_format: 24H
+    monitored_resources:
+      - "body/weight"
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'

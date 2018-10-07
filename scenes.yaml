@@ -1,0 +1,40 @@
+  - name: turn all on woonkamer
+    entities:
+      media_player.woonkamer_receiver:
+        state: on      
+      switch.woonkamer_lamp_raam:
+        state: on
+      switch.woonkamer_lamp_bank:
+        state: on                
+      switch.tv_samsung:
+        state: on
+
+       
+  - name: turn all off woonkamer
+    entities:
+      switch.woonkamer_lamp_raam:
+        state: off
+      switch.woonkamer_lamp_bank:
+        state: off              
+      media_player.woonkamer_tv:
+        state: off
+      media_player.woonkamer_receiver:
+        state: off
+      media_player.woonkamer_ziggo:
+        state: off
+        
+  - name: lights on
+    entities:
+      switch.woonkamer_lamp_raam:
+        state: on
+      switch.woonkamer_lamp_bank:
+        state: on                
+        
+  - name: lights off
+    entities:
+      switch.woonkamer_lamp_raam:
+        state: off
+      switch.woonkamer_lamp_bank:
+        state: off              
+
+        

@@ -1,0 +1,17 @@
+- alias: Woonkamer licht aanzetten
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {'state': 'on',  "entity_id": "switch.handzender_1"}
+  action:
+    service: scene.turn_on
+    entity_id: scene.lights_on
+    
+- alias: Woonkamer licht uitzetten
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {'state': 'off',  "entity_id": "switch.handzender_1"}
+  action:
+    service: scene.turn_on
+    entity_id: scene.lights_off

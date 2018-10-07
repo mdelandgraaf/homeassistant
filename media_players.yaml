@@ -1,0 +1,12 @@
+    - platform: ziggo_mediabox_xl
+      host: 192.168.178.220
+      name: Woonkamer Ziggo
+
+    - platform: onkyo
+      host: 192.168.178.73
+      name: Woonkamer Receiver
+      
+    - platform: samsungtv
+      host: 192.168.178.213
+      name: Woonkamer TV
+      mac: F4:7B:5E:20:95:36

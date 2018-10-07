@@ -1,0 +1,44 @@
+    - platform: broadlink
+      host: 192.168.178.136
+      mac: '78:0F:77:5A:CB:C8'
+      timeout: 5
+      type: rm_mini
+      switches:
+        tv_samsung:
+          friendly_name: "Samsung Tv Power"
+          command_on: 'JgBeAZWUEzYUNhM3ExITEhMSExEUERQ2EzcTNxMRFBEUERQRExITEhM3ExITERQRFBEUERMSEzcTEhM2FDYTNxM3EzYUNhMABgWWkxM3EzcTNhQRExITEhMSExITNhQ2FDYTEhMSExITEhMRFBEUNhMSExITEhMSExEUERQ2ExITNxM2FDYUNhM3EzcTAAYFlZMVNRQ2EzcTEhMSExEUERQRFDYTOBI2FBEUERQRExITEhMSEzYUERQRFBETEhMSExITNxMRFDYTNxM3EzYUNhM3EwAGBZaTEzcTNxM2FBEUERMSExITEhM3EzYUNhMSExITEhMSExITERQ2ExITEhMSFBETEhMRFDYUERM3EzcTNhQ2EzcTNxMABgWWkxM3EzYUNhMSExITEhMSExITNhQ2EzcTEhMSExEUERQRFBETNxMSExITERQRFBEUERM3ExITNhQ2FDYTNxM3EzYUAA0FAAAAAAAAAAAAAA=='
+          command_off: 'JgBeAZWUEzYUNhM3ExITEhMSExEUERQ2EzcTNxMRFBEUERQRExITEhM3ExITERQRFBEUERMSEzcTEhM2FDYTNxM3EzYUNhMABgWWkxM3EzcTNhQRExITEhMSExITNhQ2FDYTEhMSExITEhMRFBEUNhMSExITEhMSExEUERQ2ExITNxM2FDYUNhM3EzcTAAYFlZMVNRQ2EzcTEhMSExEUERQRFDYTOBI2FBEUERQRExITEhMSEzYUERQRFBETEhMSExITNxMRFDYTNxM3EzYUNhM3EwAGBZaTEzcTNxM2FBEUERMSExITEhM3EzYUNhMSExITEhMSExITERQ2ExITEhMSFBETEhMRFDYUERM3EzcTNhQ2EzcTNxMABgWWkxM3EzYUNhMSExITEhMSExITNhQ2EzcTEhMSExEUERQRFBETNxMSExITERQRFBEUERM3ExITNhQ2FDYTNxM3EzYUAA0FAAAAAAAAAAAAAA=='
+        
+    - platform: rfxtrx
+      automatic_add: True
+      signal_repetitions: 2
+      devices:
+        0b11000396bc0cfe01010f70:
+          name: Woonkamer Lamp Raam
+        0b11000295bc0cfe03010f70:
+          name: Woonkamer Lamp Bank
+        0b110000007d57ae01010f60:
+          name: Handzender 1
+          fire_event: true
+        0b11000b007d57ae02010f70:
+          name: Handzender 2     
+          fire_event: true       
+        0b110004007d57ae03010f60:
+          name: Handzender 3     
+          fire_event: true          
+
+    - platform: template
+      switches:
+        watch_tv:
+          friendly_name: "Watch TV"
+          value_template: "false"
+          turn_on:
+            service: scene.turn_on
+            data:
+              entity_id: scene.watch_tv
+          turn_off:
+            service: scene.turn_off
+            data:
+              entity_id: scene.watch_tv
+              
+              

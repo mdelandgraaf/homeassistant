@@ -1,0 +1,13 @@
+# Example configuration.yaml entry
+  verlichting_woonkamer:
+    name: Woonkamer Verlichting
+    view: yes
+    entities:
+      - group.woonkamer
+
+  woonkamer:
+    name: Woonkamer
+    view: no
+    entities:
+      - switch.woonkamer_lamp_raam
+      - switch.woonkamer_lamp_bank

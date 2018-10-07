@@ -1,0 +1,29 @@
+- alias: TV nieuws aanzetten
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {'state': 'on',  "entity_id": "switch.handzender_2"}
+  action:
+    - service: scene.turn_on
+      entity_id: scene.turn_all_on_woonkamer
+
+    - service: script.turn_on
+      entity_id: script.newsdelayed
+    
+- alias: TV uitzetten
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {'state': 'off',  "entity_id": "switch.handzender_2"}
+  action:
+    service: scene.turn_on
+    entity_id: scene.turn_all_off_woonkamer
+    
+- alias: TV nieuws aanzetten
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {'state': 'on',  "entity_id": "switch.handzender_3"}
+  action:
+    - service: script.turn_on
+      entity_id: script.schakel_nieuws

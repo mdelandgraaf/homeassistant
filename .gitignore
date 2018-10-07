@@ -1,0 +1,12 @@
+secrets.yaml
+/deps
+/tts
+/.*
+!.gitignore
+/fitbit.conf
+/home-assistant*
+.idea/workspace.xml
+.storage/auth
+fitbit.conf
+home-assistant.log
+home-assistant_v2.db
