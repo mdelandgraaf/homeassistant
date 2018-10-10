@@ -1,9 +1,78 @@
-    trigger:
-      platform: state
+- id: '1538932710140'
+  alias: Turn on lights and tv
+  trigger:
+  - event_data:
       entity_id: switch.handzender_1
-      from: 'on'
-      to: 'off'
-    action:
-      service: scene.turn_on
+      state: 'on'
+    event_type: button_pressed
+    platform: event
+  condition: []
+  action:
+  - alias: ''
+    data:
+      entity_id: scene.lights_on
+    service: scene.turn_on
+  - data:
+      entity_id: media_player.woonkamer_ziggo
+    service: media_player.turn_on
+  - data:
+      entity_id: switch.tv_samsung
+    service: switch.turn_on
+  - data:
+      entity_id: media_player.woonkamer_receiver
+    service: media_player.turn_on
+  - data:
+      entity_id: automation.watch_news_rtl_4
+    service: automation.trigger
+- id: '1538933323153'
+  alias: Watch news RTL 4
+  trigger:
+  - entity_id: automation.turn_on_lights_and_tv
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - after: 06:00:00
+    before: '23:30:00'
+    condition: time
+  action:
+  - data:
+      entity_id: media_player.woonkamer_ziggo
+      source: RTL 4
+    service: media_player.select_source
+- id: '1538933466500'
+  alias: Watch news BBC One
+  trigger: []
+  condition:
+  - after: 06:00:00
+    before: 06:30:00
+    condition: time
+  action:
+  - data:
+      entity_id: media_player.woonkamer_ziggo
+      source: BBC One
+    service: media_player.select_source
+- id: '1538933773665'
+  alias: Turn off everything
+  trigger:
+  - event_data:
+      entity_id: switch.handzender_1
+      state: 'off'
+    event_type: button_pressed
+    platform: event
+  condition: []
+  action:
+  - alias: ''
+    data:
       entity_id: scene.lights_off
-
+    service: scene.turn_on
+  - data:
+      entity_id: media_player.woonkamer_ziggo
+    service: media_player.turn_off
+  - alias: ''
+    data:
+      entity_id: media_player.woonkamer_tv
+    service: media_player.turn_off
+  - data:
+      entity_id: media_player.woonkamer_receiver
+    service: media_player.turn_off
