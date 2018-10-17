@@ -33,6 +33,19 @@
   - data:
       entity_id: scene.lights_on
     service: scene.turn_on
+- id: '1548123710140'
+  alias: Turn off lights
+  trigger:
+  - event_data:
+      entity_id: switch.handzender_2
+      state: 'off'
+    event_type: button_pressed
+    platform: event
+  condition: []
+  action:
+  - data:
+      entity_id: scene.lights_off
+    service: scene.turn_on
 - id: '1538933323153'
   alias: Watch news RTL 4
   trigger:
@@ -85,20 +98,3 @@
   - data:
       entity_id: media_player.woonkamer_receiver
     service: media_player.turn_off
-- id: '1539123433036'
-  alias: Turn lights on when tv is switched on and the sun is set
-  trigger:
-  - entity_id: media_player.woonkamer_receiver
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: or
-  conditions:
-    condition: sun
-  - after: sunset
-    condition: sun
-  - before: sunrise
-  action:
-  - data:
-      entity_id: scene.lights_on
-    service: scene.turn_on
