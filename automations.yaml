@@ -98,3 +98,21 @@
   - data:
       entity_id: media_player.woonkamer_receiver
     service: media_player.turn_off
+- id: '1539123433036'
+  alias: Turn lights on when tv is switched on and the sun is set
+  trigger:
+  - entity_id: media_player.woonkamer_receiver
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+      condition: or  # 'when dark' condition: either after sunset or before sunrise
+      conditions:
+        - condition: sun
+          after: sunset
+        - condition: sun
+          before: sunrise
+  action:
+  - data:
+      entity_id: scene.lights_on
+    service: scene.turn_on
