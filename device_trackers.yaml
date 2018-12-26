@@ -1,12 +1,11 @@
-device_tracker:
-  - platform: life360
-    username: +31642710575
-    password: !secret life360_password
-    interval_seconds: 10
-    filename: life360.conf
-    show_as_state: places, driving, moving
-    max_update_wait:
-      minutes: 30
-    members:
-      - Mike
-      - Daphne
+    - platform: life360
+      username: mdelandgraaf@gmail.com
+      password: !secret life360_password
+      interval_seconds: 10
+      filename: life360.conf
+      show_as_state: places, driving, moving
+      max_update_wait:
+        minutes: 30
+      members:
+        - Mike
+        - Daphne
