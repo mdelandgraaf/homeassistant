@@ -7,3 +7,6 @@ device_tracker:
     show_as_state: places, driving, moving
     max_update_wait:
       minutes: 30
+    members:
+      - Mike
+      - Daphne
