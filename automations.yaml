@@ -8,10 +8,6 @@
     platform: event
   condition: []
   action:
-  - alias: ''
-    data:
-      entity_id: scene.lights_on
-    service: scene.turn_on
   - data:
       entity_id: media_player.woonkamer_ziggo
     service: media_player.turn_on
@@ -24,6 +20,32 @@
   - data:
       entity_id: automation.watch_news_rtl_4
     service: automation.trigger
+- id: '1538123710140'
+  alias: Turn on lights
+  trigger:
+  - event_data:
+      entity_id: switch.handzender_2
+      state: 'on'
+    event_type: button_pressed
+    platform: event
+  condition: []
+  action:
+  - data:
+      entity_id: scene.lights_on
+    service: scene.turn_on
+- id: '1548123710140'
+  alias: Turn off lights
+  trigger:
+  - event_data:
+      entity_id: switch.handzender_2
+      state: 'off'
+    event_type: button_pressed
+    platform: event
+  condition: []
+  action:
+  - data:
+      entity_id: scene.lights_off
+    service: scene.turn_on
 - id: '1538933323153'
   alias: Watch news RTL 4
   trigger:
@@ -76,3 +98,21 @@
   - data:
       entity_id: media_player.woonkamer_receiver
     service: media_player.turn_off
+- id: '1539123433036'
+  alias: Turn lights on when tv is switched on and the sun is set
+  trigger:
+  - entity_id: media_player.woonkamer_receiver
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+      condition: or  # 'when dark' condition: either after sunset or before sunrise
+      conditions:
+        - condition: sun
+          after: sunset
+        - condition: sun
+          before: sunrise
+  action:
+  - data:
+      entity_id: scene.lights_on
+    service: scene.turn_on
