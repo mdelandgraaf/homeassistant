@@ -71,21 +71,15 @@ script: !include_dir_merge_list scripts/
 scene: !include scenes.yaml
 media_player: !include media_players.yaml
 switch: !include switches.yaml
+device_tracker: !include device_trackers.yaml
 
 rfxtrx:
   device: /dev/ttyUSB0
 
-
-          
 nest:
   client_id:  !secret nest_client_id
   client_secret: !secret nest_client_secret
   binary_sensors:
     monitored_conditions:
 
-  
-device_tracker:
-  - platform: google_maps
-    username: !secret gmail_username
-    password: !secret gmail_password
 
