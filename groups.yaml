@@ -1,9 +1,10 @@
 # Example configuration.yaml entry
   verlichting_woonkamer:
-    name: Woonkamer Verlichting
+    name: Verlichting Beneden
     view: yes
     entities:
       - group.woonkamer
+      - group.eetkamer
 
   woonkamer:
     name: Woonkamer
@@ -11,3 +12,9 @@
     entities:
       - switch.woonkamer_lamp_raam
       - switch.woonkamer_lamp_bank
+
+  eetkamer:
+    name: Eetkamer
+    view: no
+    entities:
+      - switch.spot_eetkamer

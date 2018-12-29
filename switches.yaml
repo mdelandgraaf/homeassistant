@@ -25,7 +25,9 @@
           fire_event: true       
         0b110004007d57ae03010f60:
           name: Handzender 3     
-          fire_event: true          
+          fire_event: true
+        0b110004007d57ae12345f60:
+          name: Spot Eetkamer
 
     - platform: template
       switches:
