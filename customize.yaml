@@ -30,3 +30,7 @@ sensor.hallway_nest_protect_color_status:
   hidden: true
 sensor.office_nest_protect_smoke_status:
   hidden: true
+sensor.hallway_nest_protect_co_status:
+  hidden: true
+sensor.downstairs_nest_protect_battery_health:
+  hidden: true

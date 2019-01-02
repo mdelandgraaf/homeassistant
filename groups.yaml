@@ -1,29 +1,29 @@
   verlichting_woonkamer:
     name: Verlichting Beneden
-    view: yes
     entities:
       - group.woonkamer
       - group.eetkamer
 
   woonkamer:
     name: Woonkamer
+
     view: yes
     entities:
-      - switch.woonkamer_lamp_raam
-      - switch.woonkamer_lamp_bank
+      - light.woonkamer_lamp_raam
+      - light.woonkamer_lamp_bank
 
   eetkamer:
     name: Eetkamer
     view: yes
     entities:
-      - switch.eetkamer_spot
+      - light.eetkamer_spot
 
   tv_kijken:
     name: Tv Kijken
     view: yes
     entities:
-      - switch.woonkamer_lamp_raam
-      - switch.woonkamer_lamp_bank
+      - light.woonkamer_lamp_raam
+      - light.woonkamer_lamp_bank
       - media_player.woonkamer_ziggo
       - media_player.woonkamer_receiver
       - switch.tv_samsung

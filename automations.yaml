@@ -1,0 +1,25 @@
+- id: '1538123710140'
+  alias: Turn on lights
+  trigger:
+  - event_data:
+      entity_id: switch.handzender_1
+      state: 'on'
+    event_type: button_pressed
+    platform: event
+  condition: []
+  action:
+    service: light.turn_on
+    entity_id: group.woonkamer
+
+- id: '1538121710140'
+  alias: Turn off lights
+  trigger:
+  - event_data:
+      entity_id: switch.handzender_1
+      state: 'off'
+    event_type: button_pressed
+    platform: event
+  condition: []
+  action:
+    service: light.turn_off
+    entity_id: group.woonkamer
