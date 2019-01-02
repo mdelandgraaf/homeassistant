@@ -18,9 +18,6 @@ sensor.office_nest_protect_battery_health:
 sensor.office_nest_protect_color_status:
   hide: true
 
-sensor.schellinkhout_eta:
-  hide: true
-
 sensor.downstairs_thermostat_operation_mode:
   hide: true
 
