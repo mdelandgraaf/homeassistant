@@ -17,3 +17,13 @@
     view: yes
     entities:
       - switch.eetkamer_spot
+
+  tv_kijken:
+    name: Tv Kijken
+    view: yes
+    entities:
+      - switch.woonkamer_lamp_raam
+      - switch.woonkamer_lamp_bank
+      - media_player.woonkamer_ziggo
+      - media_player.woonkamer_receiver
+      - switch.tv_samsung

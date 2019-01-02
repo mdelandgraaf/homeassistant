@@ -1,0 +1,10 @@
+    - platform: rfxtrx
+      automatic_add: True
+      signal_repetitions: 2
+      devices:
+        0b11000396bc0cfe01010f70:
+          name: Woonkamer Lamp Raam
+        0b11000295bc0cfe03010f70:
+          name: Woonkamer Lamp Bank
+        0b110004007d57ae12345f60:
+          name: Eetkamer Spot

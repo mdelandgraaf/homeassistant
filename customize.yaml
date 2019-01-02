@@ -2,47 +2,31 @@ sensor.yr_symbol:
   friendly_name: Weer
 sun.sun:
   friendly_name: Dag/Nacht
-
-
-# Nest
-
 sensor.schellinkhout_eta:
-  hide: true
-
+  hidden: true
 sensor.downstairs_nest_protect_smoke_status:
-  hide: true
-
+  hidden: true
 sensor.office_nest_protect_battery_health:
-  hide: true
-
+  hidden: true
 sensor.office_nest_protect_color_status:
-  hide: true
-
+  hidden: true
 sensor.downstairs_thermostat_operation_mode:
-  hide: true
-
+  hidden: true
 sensor.kantoor_eta:
-  hide: true
+  hidden: true
 sensor.downstairs_nest_protect_color_status:
-  hide: true
-
+  hidden: true
 sensor.downstairs_thermostat_hvac_state:
-  hide: true
-
+  hidden: true
 sensor.hallway_nest_protect_smoke_status:
-  hide: true
-
+  hidden: true
 sensor.downstairs_thermostat_target:
-  hide: true
-
+  hidden: true
 sensor.hallway_nest_protect_battery_health:
-  hide: true
-
+  hidden: true
 sensor.office_nest_protect_co_status:
-  hide: true
-
+  hidden: true
 sensor.hallway_nest_protect_color_status:
-  hide: true
-
+  hidden: true
 sensor.office_nest_protect_smoke_status:
-  hide: true
+  hidden: true

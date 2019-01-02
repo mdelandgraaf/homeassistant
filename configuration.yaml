@@ -63,7 +63,9 @@ tts:
   - platform: google
 
 # Cloud
-cloud:
+cloud: !include cloud.yaml
+
+
 
 group: !include groups.yaml
 automation: !include automations.yaml
@@ -72,6 +74,7 @@ scene: !include scenes.yaml
 media_player: !include media_players.yaml
 switch: !include switches.yaml
 device_tracker: !include device_trackers.yaml
+light: !include lights.yaml
 
 rfxtrx:
   device: /dev/ttyUSB0
