@@ -8,9 +8,18 @@
     platform: event
   condition: []
   action:
-    service: light.turn_on
-    entity_id: group.woonkamer
-
+  - data:
+      entity_id: group.woonkamer
+    service: homeassistant.turn_on
+  - data:
+      entity_id: media_player.woonkamer_ziggo
+    service: media_player.turn_on
+  - data:
+      entity_id: switch.tv_samsung
+    service: switch.turn_off
+  - data:
+      entity_id: media_player.woonkamer_receiver
+    service: media_player.turn_on
 - id: '1538121710140'
   alias: Turn off lights
   trigger:
@@ -21,5 +30,15 @@
     platform: event
   condition: []
   action:
-    service: light.turn_off
-    entity_id: group.woonkamer
+  - data:
+      entity_id: media_player.woonkamer_ziggo
+    service: media_player.turn_off
+  - data:
+      entity_id: media_player.woonkamer_tv
+    service: media_player.turn_off
+  - data:
+      entity_id: group.woonkamer
+    service: automation.turn_off
+  - data:
+      entity_id: media_player.woonkamer_receiver
+    service: media_player.turn_off
