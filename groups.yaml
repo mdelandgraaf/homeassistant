@@ -6,7 +6,6 @@
 
   woonkamer:
     name: Woonkamer
-
     view: yes
     entities:
       - light.woonkamer_lamp_raam
@@ -17,13 +16,3 @@
     view: yes
     entities:
       - light.eetkamer_spot
-
-  tv_kijken:
-    name: Tv Kijken
-    view: yes
-    entities:
-      - light.woonkamer_lamp_raam
-      - light.woonkamer_lamp_bank
-      - media_player.woonkamer_ziggo
-      - media_player.woonkamer_receiver
-      - switch.tv_samsung

@@ -1,0 +1,15 @@
+
+mike:
+  hide_if_away: false
+  icon:
+  mac:
+  name: mike
+  picture: https://www.life360.com/img/user_images/19ba6f45-46be-4a22-b4e5-7ecfafa3a364/e5f8bdff-0b99-40c4-b778-5fcbfa1d97b9.png?fd=2
+  track: true
+galaxy_s8:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Galaxy S8
+  picture:
+  track: true

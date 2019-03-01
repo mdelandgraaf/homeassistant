@@ -84,5 +84,3 @@ nest:
   client_secret: !secret nest_client_secret
   binary_sensors:
     monitored_conditions:
-
-
